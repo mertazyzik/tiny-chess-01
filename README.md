@@ -14,6 +14,11 @@ It plays the gauntlet through the env at `MAKEFUN_ENV_URL`
 (`POST /game`, `/move`, `/resign`). Practice trial 0 (local, official
 env + scorer): Elo 1545 (4 won, 1 drawn, 1 lost).
 
+The committed `main.py` itself was re-graded the same way and reproduced
+trial 0 exactly: Elo 1545 (4 won, 1 drawn, 1 lost, 452 spare plies).
+Trial 1 (different openings) also scored Elo 1545. The floor to enter
+the final is Elo 1154.
+
 The readable source is `main_src.py` (kept out of the commit on purpose:
 only `main.py` counts toward the size cap). `main.py` is the LZMA-packed
 form the kit's `makefun compress` command writes from it, byte for byte.
